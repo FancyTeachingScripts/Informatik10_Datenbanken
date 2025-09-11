@@ -1,0 +1,108 @@
+
+
+\newcommand{\dbprojekt}[9]
+{
+\Datum{#1 bis #9}
+
+\section{Rahmenbedingungen}
+\begin{itemize}
+    \item Bearbeitung in Teams bestehend aus 4 Personen
+    \item Melden der Gruppen bis spätestens vor der ersten Deadline bei Herr Herrmann.
+    \item Entwicklung nach dem Wasserfall-Modell:  \url{bycs.link/inf10-wasserfall} oder \\\url{de.wikipedia.org/wiki/Wasserfallmodell}
+    \item Als Datenbanksoftware wird YoungDB verwendet (kostenlos verfügbar unter: \url{klassenkarte.de/index.php/tools/youngdb/}, \emph{Hinweis: Es sind nur SELECT, keine INSERT oder UPDATE Befehle möglich.}).
+    \item Zusätzlich zur Arbeit im Informatik-Unterricht wird auch \emphBlue{Arbeit zuhause} notwendig sein. \emphBlue{Arbeitsteilung ist erwünscht!}
+    \item Empfehlung: Dateien auf BYCS-Drive speichern.
+    \item Alle Abgaben im PDF-, YKD- (Young DB Datenbankmodell) oder YDB- (Young DB Datenbank) Format.
+     (per BYCS-Drive oder Mebis, wird rechtzeitig bekannt gegeben).
+\end{itemize}
+
+\section{Inhaltliche Anforderungen}
+\begin{itemize}
+    \item Datenbank mit mindestens 4 inhaltlichen Tabellen (Beziehungstabellen zusätzlich)
+    \item alle 3 Kardinalitäts-Typen
+    \item Mindestens: Erfüllung der 1. und 2. Normalform
+    \item Bonus-Punkte: Erfüllung der 3. Normalform
+    \item Auslesen von Daten (zur Erfüllung der Anforderungen) ausschließlich über SQL-Abfragen.
+\end{itemize}
+
+\section{Grober Zeitplan}
+
+\begin{enumerate}
+    \item \textbf{Woche ab #1:} Anforderungsanalyse und Einarbeitung in das Wasserfallmodell\\
+       $\rightarrow$  \emphBlue{Abgabe: Lastenheft bis #2, 23:59 Uhr}
+    \item \textbf{Woche ab #2:} Datenbankentwurf\\
+       $\rightarrow$  \emphBlue{Abgabe: Pflichtenheft bis #3, 23:59 Uhr}
+    \item \textbf{Woche ab #3:} Umsetzung der Datenbank
+    \item \textbf{Woche ab #4:} Umsetzung der Datenbank
+    \item \textbf{Woche ab #5:} Umsetzung der Datenbank\\
+       $\rightarrow$  \emphBlue{Abgabe: Datenbank bis #6, #7}
+    \item \textbf{Woche ab #6:} Tests + Dokumentation
+    \item \textbf{Woche ab #8:} Abschluss der Dokumentation und Reflexion\\
+       $\rightarrow$  \emphBlue{Abgabe: Dokumentation und Reflexion bis #9, 23:59 Uhr}
+\end{enumerate}
+
+\section{Anforderung einzelner Phasen}
+
+\subsection{Anforderungsanalyse}
+\begin{itemize}
+    \item Einarbeitung in Wasserfallmodell und User Stories etc. + (parallel) Entwurf der Projektidee
+    \item Allgemeine Beschreibung des Produkts und Einsatz (\emphBlue{Lastenheft})
+    \item 5 funktionale und 3 nicht-funktionale Anforderungen (\emphBlue{Lastenheft})
+    \item mindestens 2 User Stories (\emphBlue{Lastenheft})
+    \item Empfehlung: Formulierung einzelner TODOs auf einem Project Board.
+\end{itemize}
+
+\subsection{Datenbankentwurf}
+\begin{itemize}
+    \item Entwurf des Datenbankschemas mit \url{apollon.ase.in.tum.de}
+    $\rightarrow$ \emphOrange{Klassendiagramm} (\emphBlue{Pflichtenheft})
+    \item Entwurf User Interface (= Ausgabetabellen der SQL-Abfragen)
+    $\rightarrow$ Festhalten mittels Skizzen/Beschreibung (\emphBlue{Pflichtenheft})
+    \item Zuordnung der Inhalt zu den Anforderung aus dem Lastenheft (\emphBlue{Pflichtenheft}).
+\end{itemize}
+
+\subsection{Umsetzung}
+\begin{itemize}
+    \item Umsetzung des Plans aus dem Pflichtenheft
+    \item Haltet euch möglichst genau an euer Pflichtenheft. Änderungen sollen nur notfalls vorgenommen werden und müssen begründet werden.
+    \item Bearbeitung möglichst arbeitsteilig.
+    \item \emphOrange{Achtung: } Nach einer Änderung des Datenbankmodells in YoungDB muss eine neue Datenbank generiert und alle Datensätze neu eingetragen werden! 
+\end{itemize}
+
+\subsection{Tests}
+\begin{itemize}
+    \item Kontinuierliches Testen während der Umsetzung.
+    \item Überprüfung des Endprodukts zuerst anhand des \emphOrange{Pflichtenhefts} anschließend anhand des \emphOrange{Lastenhefts}
+    \item Gesamtbeurteilung, ob das Projekt erfolgreich umgesetzt wurde.
+    \item Festhalten aller Ergebnisse in einem Test-Protokoll (eine Auflistung, welche Anforderung wann von wem geprüft wurde und ob die Überprüfung erfolgreich war und wenn nicht, wieso).
+\end{itemize}
+
+\subsection{Dokumentation}
+\begin{itemize}
+    \item Inhalt: \emphBlue{Lastenheft, Pflichtenheft, Testprotokoll, Bedienungsanleitung, Finales Datenbankschema} (mit allen vorgenommenen Änderungen), \emphBlue{alle SQL-Abfragen} (SQL-Code)
+    \item Optisch ansprechendes Dokument!
+\end{itemize}
+
+\subsection{Bericht/Reflexion über...}
+\begin{itemize}
+    \item ...die einzelnen Projektphasen und aufgetretene Schwierigkeiten.
+    \item ...während der Umsetzung erfolgte Änderungen gegenüber Pflichtenheft.
+    \item ...was ihr wieder so/anders machen würdet.
+    \item ...die erfolgte Arbeitsteilung.
+\end{itemize}
+
+\section{Benotung}
+\subsection{Note 1: Produkt und Arbeitsphase}
+\begin{itemize}
+    \item Funktionalität der Datenbank, Erfüllung der Spezifikation (Anforderungen)
+    \item Umsetzung des Wasserfallmodells
+    \item Beobachtung während Arbeitsphase
+\end{itemize}
+
+\subsection{Note 2: Dokumentation und Reflexion}
+\begin{itemize}
+    \item Verständlichkeit, Sprache
+    \item Übereinstimmung mit dem Produkt
+    \item differenzierte Reflexion der eigenen Arbeit
+\end{itemize}
+}

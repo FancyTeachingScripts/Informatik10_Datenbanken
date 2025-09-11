@@ -1,0 +1,31 @@
+%\Aufgabe{Song-Datenbank SQL}
+
+Bearbeite dann folgende SQL-Aufgaben auf der Website \url{www.dbiu.de/songs} und notiere die getesteten Abfragen. 
+
+
+\begin{enumerate}
+    
+    %\item  Welche Songs (alle Attribute) gibt es insgesamt?\\
+    %\LoesungLine{SELECT * FROM Song}{1}
+    
+    %\item Welche IDs haben die Songs, die in irgendeiner Playlist enthalten sind?\\
+    %\LoesungLine{SELECT Song.id FROM Song, Song\_in\_Playlist WHERE Song\_in\_Playlist.song\_id = Song.id}{2}
+    
+    \item Welche Songs (alle Attribute) sind in irgendeiner Playlist enthalten?\\
+    \LoesungLine{SELECT Song.* 
+    FROM Song, Song\_in\_Playlist 
+    WHERE Song\_in\_Playlist.song\_id = Song.id}{2}
+    
+    \item Gib die Titel aller Playlists und die Titel der jeweils zugehörigen Songs aus.\\
+    \LoesungLine{SELECT Playlist.titel, Song.titel
+    FROM Song, Playlist, Playlist, Song\_in\_Playlist 
+    WHERE Song\_in\_Playlist.song\_id = Song.id 
+    AND Song\_in\_Playlist.playlist\_id = Playlist.id}{4}
+
+    \item Welche Songs (alle Attribute) sind in der Playlist namens 'Fussballhits' enthalten?\\
+    \LoesungLine{SELECT Song.* 
+    FROM Song, Song\_in\_Playlist, Playlist 
+    WHERE Song\_in\_Playlist.song\_id = Song.id 
+    AND Song\_in\_Playlist.playlist\_id = Playlist.id
+    AND Playlist.tiel = 'Fussballhits'}{5}
+\end{enumerate}

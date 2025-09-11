@@ -1,0 +1,15 @@
+\Hefteintrag{2}{Kreuzprodukt / Join}{
+Möchte man Daten aus zwei Tabellen mit Beziehung zueinander abfragen, gibt man beide Tabellen \emphOrange{mit Komma getrennt nach FROM} an.
+
+Die SQL-Abfrage bildet dann das \LoesungLuecke{Kreuzprodukt}{7cm} der Tabellen. Die Ergebnistabelle enthält \LoesungLuecke{alle Kombinationen}{7cm} von Datensätzen beider Tabellen \emphOrange{(Merkregel: \LoesungLuecke{Jeder mit Jedem}{9cm})}.
+
+Um nur zusammengehörige Datensätze (also solche, die miteinenader in Beziehung stehen, z.B. eine Bewohner mit seinem Dorf) auszuwählen, ergänzt man als \emphGreen{Selektion} eine \emphGreen{Gleichheitsbedingung} zwischen Fremd- und zugehörigem \LoesungLuecke{Primärschlüssel}{8cm}. Dann spricht man von einem \LoesungLuecke{Join}{4cm}.
+
+Zum Beispiel kann man in SQL-Island die Daten aller Dörfer und ihrer zugehörigen Häuptlinge so ausgeben:
+
+
+
+\begin{center}
+SELECT * \\\emphOrange{FROM Dorf, Bewohner} \\\emphGreen{WHERE Dorf.haeuptling = Bewohner.bewohnernr}    
+\end{center}
+}
