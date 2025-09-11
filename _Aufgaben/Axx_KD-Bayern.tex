@@ -41,7 +41,7 @@ AND Gemeinde.name="Erlangen"}{4}
 
 \vspace{0.3cm}
 
-Schreibe eine SQL-Abfrage, die die Anzahl an Radwegen, die an Gemeinden im PLZ-Bereich \emphOrange{größer} als 96400 angrenzen, ausgibt.
+Schreibe eine SQL-Abfrage, die die Anzahl an Radwegen, die an Gemeinden im PLZ-Bereich \emphColA{größer} als 96400 angrenzen, ausgibt.
 
 \LoesungLine{SELECT COUNT(*)\\
 FROM Gemeinde, Radweg\_zu\_Gemeinde\\
@@ -57,5 +57,5 @@ WHERE Gemeinde.schluessel=Radweg\_zu\_Gemeinde.gemeindeschluessel\\
 Zeichne das vollständige (Datentypen, Beziehungen, Kardinalitäten, alle Klassen) Klassendiagramm für diese Datenbank.
 
 
-\LoesungKaro{\includegraphics[width=\textwidth]{Aufgaben/img/Bayern_DB.png}}{49}
+\LoesungKaro{\includegraphics[width=\textwidth]{img/Bayern_DB.png}}{49}
 \end{minipage}

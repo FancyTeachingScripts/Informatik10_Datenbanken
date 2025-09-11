@@ -1,5 +1,5 @@
 \begin{center}
-    \includegraphics[width=\textwidth]{Aufgaben/img/Bayern_DB.png}
+    \includegraphics[width=\textwidth]{img/Bayern_DB.png}
 \end{center}
 
 \Aufgabe{Aufgaben}{
@@ -16,8 +16,8 @@ Verändere die SQL-Abfrage so, dass die Namen und Internetadressen (=url) aller 
 \vspace{0.3cm}
 
 \large
-\emphBlue{SELECT Zoo.name, Gemeinde.name} \LoesungLuecke{,Gemeinde.regierungsbezirk, Zoo.url}{8cm}\\\vspace{0.5cm}
-\emphBlue{FROM Zoo, Gemeinde}\\
+\emphColB{SELECT Zoo.name, Gemeinde.name} \LoesungLuecke{,Gemeinde.regierungsbezirk, Zoo.url}{8cm}\\\vspace{0.5cm}
+\emphColB{FROM Zoo, Gemeinde}\\
 \LoesungLuecke{WHERE Zoo.gemeindeschluessel = Gemeinde.schluessel}{17cm}
 }
 
@@ -29,8 +29,8 @@ Verändere die SQL-Abfrage so, dass die der Namen und Straßen aller Freizeitpar
 
 \vspace{0.3cm}
 \large
-\emphBlue{SELECT Freizeitpark.name, Gemeinde.name} \LoesungLuecke{, Freizeitpark.strasse}{8cm}\\\vspace{0.5cm}
-\emphBlue{FROM Freizeitpark, Gemeinde}\\
+\emphColB{SELECT Freizeitpark.name, Gemeinde.name} \LoesungLuecke{, Freizeitpark.strasse}{8cm}\\\vspace{0.5cm}
+\emphColB{FROM Freizeitpark, Gemeinde}\\
 \LoesungLine{WHERE Gemeinde.schluessel = Freizeitpark.gemeindeschluessel}{1}
 
 
@@ -101,7 +101,7 @@ AND Schwimmbad.art="Freibad"}{4}
 
 
 
-Schreibe eine SQL-Abfrage, die die Anzahl an Radwegen, die an Gemeinden im PLZ-Bereich \emphOrange{größer} als 96400 angrenzen, ausgibt.
+Schreibe eine SQL-Abfrage, die die Anzahl an Radwegen, die an Gemeinden im PLZ-Bereich \emphColA{größer} als 96400 angrenzen, ausgibt.
 
 \LoesungLine{SELECT COUNT(*)\\
 FROM Gemeinde, Radweg\_zu\_Gemeinde\\

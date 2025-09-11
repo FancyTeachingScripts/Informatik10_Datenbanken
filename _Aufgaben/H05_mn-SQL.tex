@@ -1,15 +1,15 @@
 \Hefteintrag{1.9}{SQL-Abfragen mit Join bei m:n-Beziehungen}{
 Um zwei Tabellen, die eine m:n-Beziehung miteinander haben, zu joinen (also ihren Join zu bilden und in der Ergebnistabelle nur \LoesungLuecke{zusammengehörende}{7cm} Datensätze zu haben), muss man:
 \begin{itemize}
-    \item Daten aus allen \LoesungLuecke{drei}{2cm} Tabellen abfragen (also diese nach \emphOrange{\LoesungLuecke{FROM}{3cm}} auflisten).
-    \item Die \emphOrange{\LoesungLuecke{Beziehungstabelle}{8cm}} einzeln mit den normalen Tabellen joinen. Hierfür benötigt man \emphOrange{\LoesungLuecke{zwei}{2cm}} Join-Bedingungen, die mit \emphOrange{\LoesungLuecke{AND}{2cm}} verknüpft werden.
+    \item Daten aus allen \LoesungLuecke{drei}{2cm} Tabellen abfragen (also diese nach \emphColA{\LoesungLuecke{FROM}{3cm}} auflisten).
+    \item Die \emphColA{\LoesungLuecke{Beziehungstabelle}{8cm}} einzeln mit den normalen Tabellen joinen. Hierfür benötigt man \emphColA{\LoesungLuecke{zwei}{2cm}} Join-Bedingungen, die mit \emphColA{\LoesungLuecke{AND}{2cm}} verknüpft werden.
 \end{itemize}
 
-\emphOrange{Beispiel:}
+\emphColA{Beispiel:}
 
-\emphGreen{SELECT} Lehrkraft.*, Schulklasse.*\\
-\emphGreen{FROM} Lehrkraft, Schulklasse, \emphBlue{\LoesungLuecke{Lehrer\_unterricht\_Klasse}{10cm}}\\
-\emphGreen{WHERE} \emphBlue{Lehrer\_unterricht\_Klasse.lehrer} = \LoesungLuecke{Lehrkraft.kuerzel}{8cm} \\
-\emphGreen{AND}  \emphBlue{Lehrer\_unterricht\_Klasse.klasse} = \LoesungLuecke{Schulklasse.bezeichner}{8cm}
+\emphColC{SELECT} Lehrkraft.*, Schulklasse.*\\
+\emphColC{FROM} Lehrkraft, Schulklasse, \emphColB{\LoesungLuecke{Lehrer\_unterricht\_Klasse}{10cm}}\\
+\emphColC{WHERE} \emphColB{Lehrer\_unterricht\_Klasse.lehrer} = \LoesungLuecke{Lehrkraft.kuerzel}{8cm} \\
+\emphColC{AND}  \emphColB{Lehrer\_unterricht\_Klasse.klasse} = \LoesungLuecke{Schulklasse.bezeichner}{8cm}
 
 }
