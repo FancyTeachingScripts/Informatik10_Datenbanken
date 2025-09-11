@@ -1,0 +1,55 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sty/1_ForwardDeclaration}[]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\Fachtext}{}
+\providecommand{\Lehrertext}{}
+\providecommand{\Lehrervornametext}{}
+\providecommand{\Lehrernachnametext}{}
+\providecommand{\Titeltext}{}
+\providecommand{\Testarttesttext}{}
+\providecommand{\Datumtext}{}
+\providecommand{\Klassetext}{}
+\providecommand{\Nrtext}{}
+\providecommand{\LoesungTitleExtensionText}{}
+
+\newcommand{\Aufgabe}[3][0]{}
+\newcommand{\UnterAufgabe}[2][0]{}
+\newcommand{\Hefteintrag}[4][0]{}
+
+\newcommand{\theme}{mtg}
+\newcommand{\SetTheme}[1]{\renewcommand{\theme}{#1}}
+
+
+\providecommand{\Content}{}
+\providecommand{\multi}{}
+\providecommand{\EndOfSession}{}
+\providecommand{\kariert}[2][0.5cm]{}
+\providecommand{\kariertoverlay}[2][0.5cm]{}
+\providecommand{\liniert}[2][1.2cm]{}
+\providecommand{\timer}[1]{}
+\providecommand{\TFarbe}{black}
+\providecommand{\LFarbe}{blue}
+\providecommand{\LoesungTitleExtensionText}{}
+\providecommand{\emphColA}[1]{}
+\providecommand{\emphColB}[1]{}
+\providecommand{\emphColC}[1]{}
+\providecommand{\emphColor}[2]{}
+\providecommand{\hinweis}[1]{}
+
+\definecolor{colA}{rgb}{0, 0, 0}
+\definecolor{colB}{rgb}{0, 0, 0}
+\definecolor{colC}{rgb}{0, 0, 0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BOOLEANS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newboolean{LsgAntworten}
+\setboolean{LsgAntworten}{false}
+
+\newboolean{LetzterStand}
+\setboolean{LetzterStand}{false}
+
