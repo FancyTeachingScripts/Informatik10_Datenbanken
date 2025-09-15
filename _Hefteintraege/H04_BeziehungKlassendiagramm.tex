@@ -1,0 +1,29 @@
+\Hefteintrag{1}{Tabellenbeziehungen im Klassendiagramm}{
+    \ifbeamer\else\vspace{12pt}\fi
+    \LoesungLeer{}{2cm}
+    \begin{tikzpicture}
+        \begin{class}{TabelleA}{0,0}
+            \attribute{int id}
+            \attribute{String spalte1}
+            \attribute{...}
+        \end{class}
+        \begin{class}{TabelleB}{11,0}
+            \attribute{int id}
+            \attribute{String spalte1}
+            \attribute{...}
+        \end{class}
+        
+        \Loesung{\uniAssociation{TabelleA}{n}{{fremdschlüssel}}{1}{TabelleB}}
+    \end{tikzpicture}
+
+    \LoesungLeer{{
+    
+        \begin{itemize}
+        \color{\LFarbe}
+            \item Beziehungspfeil immer vom Fremd- zum Primärschlüssel.
+            \item 'fremdschluessel' ist eine Spalte der TabelleA, wird dort aber nicht eingetragen.
+            \item Die Form der Pfeilspitze ist wichtig und muss genau so sein, da andere Spitzen andere Bedeutungen haben!
+            \item Kardinalität an der Pfeilspitze ist immer 1 (bei Datenbanken), da in einer Spalte (eines Datensatzes) immer nur ein Wert stehen kann. 
+        \end{itemize}
+    }}{2cm}
+}

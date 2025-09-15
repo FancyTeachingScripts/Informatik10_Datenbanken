@@ -1,0 +1,41 @@
+\Aufgabe[25]{Übung: SQL Island}{
+\UrlAndCode{sql-island.informatik.uni-kl.de/}
+\begin{enumerate}
+    \item Was sind die Primärschlüssel der Tabellen, die die einzelnen Objekte eindeutig identifizieren?
+        \\$\rightarrow$ Notiert das vollständige Tabellenschema der Datenbank von SQL Island (mit Datentypen und Markierung der Primärschlüssel)\\
+        \hinweis{Den Datentyp Character gibt es in den meisten Datenbanksystemen nicht. Wir verwenden daher immer String (=Text).}
+        \\ \LoesungLine{{\fontfamily{pcr}\selectfont\footnotesize
+                \textbf{BEWOHNER(\underline{int bewohnernr} , String name, int dorfnr, String geschlecht, String beruf, int gold, String status)}\\
+                \textbf{GEGENSTAND(\underline{String gegenstand}, int besitzer)}\\
+                \textbf{DORF(\underline{int dorfnr}, String name, int haeuptling)}
+            }}{4}
+    \item Stellt die Tabellen der Datenbank mit Klassenkarten dar.\\
+    \vspace{0.2cm}
+        \LoesungKaroTikz{
+            \begin{class}{BEWOHNER}{0,0}
+                \attribute{int bewohnernr}
+                \attribute{String name}
+                \attribute{int dorfnr}
+                \attribute{String geschlecht}
+                \attribute{String beruf}
+                \attribute{int gold}
+                \attribute{String status}
+            \end{class}
+            \begin{class}{GEGENSTAND}{6,0}
+                \attribute{String gegenstand}
+                \attribute{int besitzer}
+            \end{class}
+            \begin{class}{DORF}{12,0}
+                \attribute{int dorfnr}
+                \attribute{String name}
+                \attribute{int haeuptling}
+            \end{class}
+        }{30}
+    \item Spielt SQL Island, der SQL-Spickzettel hilft euch dabei.
+\end{enumerate}
+
+    
+
+
+
+}

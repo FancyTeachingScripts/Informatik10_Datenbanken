@@ -1,0 +1,17 @@
+\Hefteintrag{1.5}{Wdh: Aufbau von (relationalen) Datenbanken}{
+
+    Datenbanken speichern Datensätze in \emphColA{\LoesungLuecke{Tabellen}{5cm}}. Die \emphColB{\LoesungLuecke{Spaltenüberschriften}{7cm}} repräsentieren die \emphColB{Attribute} (Synonym: Feld) und bilden zusammen eine \emphColor{yellow}{Klasse}. Die \emphColC{\LoesungLuecke{Datensätze}{5cm} (=Zeilen)} entsprechen \emphColC{Objekten} und in den Spalten stehen die Attributwerte.
+    Jede Tabelle hat einen \emphColor{red}{\LoesungLuecke{Primärschlüssel}{6cm} (oft auch „ID“)}, der Datensätze eindeutig identifiziert. Oft werden die Datensätze hiermit einfach durchnummeriert. Im Tabellenschema wird er unterstrichen und im Klassendiagramm immer als erstes Attribut aufgelistet.
+    
+    Der Aufbau einer Tabelle kann mit  \emphColA{\LoesungLuecke{Klassenkarte}{5cm}} oder \emphColA{\LoesungLuecke{Tabellenschema}{5cm}} dargestellt werden. Dessen Aufbau ist:
+
+    {
+        \fontfamily{pcr}\selectfont
+        \textbf{TABELLENNAME(\underline{Datentyp Primärschlüssel} , Datentyp Spalte1, Datentyp Spalte2, …)}
+    }
+
+        Zum Beispiel:
+
+        \LoesungLine{Person(\underline{int id}, String name, int alter, …)}{1}
+    
+}

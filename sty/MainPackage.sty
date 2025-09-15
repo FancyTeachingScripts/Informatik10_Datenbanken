@@ -20,6 +20,7 @@
 \newif\ifqrcodes
 \newif\ifattachments
 \newif\ifhints
+\newif\ifcover
 
 % single options
 \DeclareOption{presentation}{ \beamertrue }
@@ -32,6 +33,7 @@
 \DeclareOption{attachements}{ \attachmentstrue } 
 \DeclareOption{qrcodes}{ \qrcodestrue } 
 \DeclareOption{hinweise}{ \hintstrue } 
+\DeclareOption{cover}{ \covertrue } 
 
 
 
@@ -124,6 +126,7 @@
     \attachmentstrue
     \qrcodestrue
     \hintstrue
+    \covertrue
 } 
 \DeclareOption{print-solution}{ 
     %\beamertrue 
@@ -194,8 +197,8 @@
 \graphicspath{{./img/}}
 \vbadness=10000
 \hbadness=99999
+
 \setlength{\parindent}{0pt}
-\setlength\parindent{0pt}
 
 %%%%%%%%%%%%%
 \ifavenir

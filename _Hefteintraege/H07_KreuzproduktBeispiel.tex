@@ -1,0 +1,48 @@
+\Hefteintrag{1}{Join Beispiel}{
+\ifbeamer\else\vspace{0.3cm}\fi
+\centering
+\begin{minipage}[t]{0.25\textwidth}
+    \centering
+    Lehrkraft\\\vspace{0.1cm}
+    \begin{tabular}{c|c|c}
+        id & kuerzel & schule \\\hline
+        1 & Her & MTG\\
+        2 & Ext & Dante\\
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \emphColB{SELECT * \\FROM Lehrkraft, Schule}\\
+    \emphColC{WHERE Lehrkraft.schule = Schule.id}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}
+    \centering
+    Schule\\\vspace{0.1cm}
+    \begin{tabular}{c|c}
+        id & ort \\\hline
+        MTG & Haidh.\\
+        Dante & Sendl.\\
+    \end{tabular}\
+\end{minipage}
+
+\vspace{0.2cm}
+\emphColB{Ergebnistabelle des Kreuzprodukts:}\\\vspace{0.1cm}
+\begin{tabular}{c|c|c|c|c}
+    id & kuerzel & schule & id & ort \\\hline
+    1 & Her & \emphColC{MTG} & \emphColC{MTG} & Haidh. \\
+    2 & Ext & \emphColor{red}{Dante} & \emphColor{red}{MTG} & Haidh. \\
+    1 & Her & \emphColor{red}{MTG} & \emphColor{red}{Dante} & Sendl. \\ 
+    2 & Ext & \emphColC{Dante} & \emphColC{Dante} & Sendl.\\
+\end{tabular}
+
+\vspace{0.5cm}
+\emphColC{Ergebnistabelle des Joins}\\\vspace{0.1cm}
+\begin{tabular}{c|c|c|c|c}
+    id & kuerzel & schule & id & ort \\\hline
+    1 & Her & \emphColC{MTG} & \emphColC{MTG} & Haidh. \\
+    2 & Ext & \emphColC{Dante} & \emphColC{Dante} & Sendl.\\
+\end{tabular}
+
+}

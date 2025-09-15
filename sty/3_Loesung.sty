@@ -11,9 +11,25 @@
     \ifbeamer
         \stepcounter{lsgcount}
         \onslide<\value{lsgcount}-> 
-            {{\color{\LFarbe} \fontspec{Comic Sans MS} #1} }%
+            {{
+                \color{\LFarbe}
+                \renewcommand{\umldrawcolor}{\LFarbe}
+                \renewcommand{\umltextcolor}{\LFarbe}
+                \fontspec{Comic Sans MS} 
+                #1
+                \renewcommand{\umldrawcolor}{\TFarbe}
+                \renewcommand{\umltextcolor}{\TFarbe}
+            }}%
     \else
-        { \color{\LFarbe} \fontspec{Comic Sans MS} #1}
+        { 
+            \color{\LFarbe}
+            \renewcommand{\umldrawcolor}{\LFarbe}
+            \renewcommand{\umltextcolor}{\LFarbe}
+            \fontspec{Comic Sans MS} 
+            #1
+            \renewcommand{\umldrawcolor}{\TFarbe}
+            \renewcommand{\umltextcolor}{\TFarbe}
+        }
     \fi
 }
 

@@ -1,0 +1,61 @@
+\Hefteintrag{1.8}{Wdh: Klassen und Objekte}{
+    \emphColA{\LoesungLuecke{Objekte}{5cm}} repräsentieren \emphColA{Gegenstände} in einem Computerprogramm. \emphColB{\LoesungLuecke{Klassen}{5cm}} sind der \emphColB{Bauplan}, der festlegt, welche \emphColC{Eigenschaften} (\emphColC{\LoesungLuecke{Attribute}{5cm}}) und \emphColor{red}{Fähigkeiten} (\emphColor{red}{\LoesungLuecke{Methoden}{5cm}}) einer bestimmten Objektart gespeichert werden sollen. Man stellt sie dar mit:
+
+    %\vspace{0.1cm}
+    \begin{minipage}[t]{0.32\textwidth}
+        \centering
+        \Large \emphColB{Klassenkarte}
+
+        \vspace{0.1cm}
+        \LoesungKaroTikz{
+            \begin{class}[text width=\textwidth]{Person}{0,0}
+                \attribute{String hobby}
+                \attribute{int alter}
+                \attribute{boolean hatHaustier}
+                \attribute{String peinlichesErlebnis }
+                \operation{void atmen()}
+            \end{class}
+        }{15}
+        \Loesung{spitze Ecken}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \Loesung{
+            \vspace{0.1cm}
+            
+            {\flushright
+            $\leftarrow$ Klassenname}
+
+            \vspace{-5pt}
+            {\flushleft
+            Objektname~:~Klassenname $\rightarrow$}
+
+            \vspace{1cm}
+            Attribute
+
+            \vspace{2cm}
+            {\flushright
+            $\leftarrow$ Methoden}
+        }
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \centering
+        \Large \emphColA{Objektkarte}
+
+        \vspace{0.1cm}
+        \LoesungKaroTikz{
+            \begin{object}[text width=\textwidth]{p1 : Person}{0,0}
+                \attribute{hobby = "Klettern"}
+                \attribute{alter = 23}
+                \attribute{hatHaustier = false}
+                \attribute{peinlichesErlebnis = "..."}
+            \end{object}
+        }{15}
+        \Loesung{runde Ecken}    
+    \end{minipage}
+    
+    \setstretch{1.0}
+    \hinweis{Generell kann man Objektkarten mit oder ohne Methoden zeichnen, solange man es insgesamt einheitlich macht. Wir zeichnen sie daher immer \underline{ohne Methoden}.}
+}

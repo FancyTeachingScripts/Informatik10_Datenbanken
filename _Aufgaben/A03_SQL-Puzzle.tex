@@ -1,0 +1,109 @@
+\Aufgabe[15]{SQL Puzzle}{
+    In dieser Aufgabe geht es immer um die Tabelle \emph{land}, deren erste Datensätze du hier siehst:
+
+    \vspace{0.2cm}
+    \begin{tabularx}{\textwidth}{C|C|C|C|C} 
+       \emph{id} & \emph{name} & \emph{einwohner} & \emph{flaeche} & \emph{hauptstadt}\\\hline
+       1 & Deutschland & 83.24 & 358 & Berlin \\
+       2 & Frankreich & 67.39 & 544 & Paris \\
+       3 & Brasilien & 212.60 & 8516 & Rio de Janeiro \\
+       ... & ... & ... & ... & ... \\
+    \end{tabularx}
+    
+    \setcounter{tmp}{1}
+
+    \centering
+    \emphColB{Welche SQL-Abfrage (rechte Seite) führt zu welcher Ergebnistabelle (linke Seite)? Ordne richtig zu!}
+
+    \Loesung{
+        Lösung:
+        
+        \begin{multicols}{3}
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{iv)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{viii)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{vii)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{i)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{ix)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{iii)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{v)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{ii)} \pause
+            
+            \emphColB{\ShowAndStepCounter{tmp}{\arabic})} \emphColA{vi)}
+        \end{multicols}
+    }
+
+    \ifbeamer
+    \else
+        \doppelseite{0.3}{0.3}{t}{
+            \setcounter{tmp}{1}
+            \begin{tabularx}{\textwidth}{C}\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige alle Spalten der Tabelle land.\\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Spalten name und hauptstadt der Tabelle land.\\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die durchschnittliche Einwohnerzahl aller Länder.\\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Namen aller Länder in  alphabetisch absteigender Reihenfolge.\\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Hauptstädte der Länder, deren Einwohnerzahl größer als 50 Mio ist.\\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Anzahl aller Länder, deren Name mit 'land' endet. \\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Namen aller Länder, deren Fläche zwischen 100 und 999 Tausend km² liegt.\\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Namen der Länder, die mit 'D' beginnen oder mit 'd' aufhören. \\\\\hline\\
+                \emphColB{\ShowAndStepCounter{tmp}{\arabic})}
+                Zeige die Namen der drei Länder mit der größten Einwohnerzahl. \\
+            \end{tabularx}
+        }{
+            \setcounter{tmp}{1}
+            \begin{tabularx}{\textwidth}{C}
+                \\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT name\\
+                FROM land  \\
+                ORDER BY name DESC;\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT name \\
+                FROM land \\
+                WHERE name LIKE 'D\%'  \\
+                OR name LIKE '\%d';\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT COUNT(*) \\
+                FROM land \\
+                WHERE name LIKE '\%land';\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT * \\
+                FROM land;\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT name  \\
+                FROM land \\
+                WHERE flaeche >= 100  \\
+                AND flaeche <= 999;\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT name, einwohner \\
+                FROM land  \\
+                ORDER BY einwohner DESC \\
+                LIMIT 3;\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT AVG(einwohner) \\
+                FROM land; \\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT name, hauptstadt \\
+                FROM land;\\\\\hline\\
+                \emphColA{\ShowAndStepCounter{tmp}{\roman})}
+                SELECT hauptstadt \\
+                FROM land \\
+                WHERE einwohner > 50;
+            \end{tabularx}
+        }
+    \fi
+}

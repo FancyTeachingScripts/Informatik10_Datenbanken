@@ -19,6 +19,7 @@
 \RequirePackage{tabularx}
 \RequirePackage{ragged2e}
 \RequirePackage{setspace}
+\RequirePackage{luacode}
 % Define column type C only if not already defined
 %makeatletter
 %\makeatother
@@ -41,7 +42,6 @@
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{pgfopts}
 \RequirePackage{multicol}
-\RequirePackage{hyperref}
 \RequirePackage{qrcode}
 \RequirePackage{wrapfig}
 \RequirePackage{attachfile2}
@@ -51,13 +51,6 @@
 \DTMlangsetup{abbr}
 
 
-% Fix hyperref warnings by disabling problematic commands in PDF strings
-\pdfstringdefDisableCommands{%
-  \def\@ifnextchar{}%
-  \def\color#1{}%
-  \def\textbf#1{#1}%
-  \def\textit#1{#1}%
-}
 
 % Settings to prevent overfull vbox issues
 %\makeatletter
@@ -82,7 +75,8 @@
 \RequirePackage{silence}
 \RequirePackage{listings}
 \RequirePackage{svg}
-\RequirePackage{sty/tikz-uml}
+%\RequirePackage{sty/tikz-uml}
+\RequirePackage[school]{pgf-umlcd}
 \RequirePackage{makecell}
 \RequirePackage{adjustbox}
 \RequirePackage{bbding}
@@ -93,5 +87,16 @@
 \RequirePackage{media9}
 \RequirePackage{calc}
 \RequirePackage{intcalc}
+\RequirePackage{ulem}
 
 
+
+
+\RequirePackage{hyperref}
+% Fix hyperref warnings by disabling problematic commands in PDF strings
+\pdfstringdefDisableCommands{%
+  \def\@ifnextchar{}%
+  \def\color#1{}%
+  \def\textbf#1{#1}%
+  \def\textit#1{#1}%
+}

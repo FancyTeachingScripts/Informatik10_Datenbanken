@@ -36,11 +36,12 @@
   \fi
 }
 
+
 % Define style for subsequent pages with smaller headsep
 \fancypagestyle{otherpage}{%
   \setlength{\headsep}{20pt}
   \fancyhead[L]{\Testarttesttext~\Nrtext:~\Titeltext}
-  \fancyhead[C]{}
+  \fancyhead[C]{}^
   \fancyhead[R]{\Datumtext}
 }
 
@@ -54,8 +55,27 @@
 %%%%%%%%%%%%%%%%% Begin/End Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{
-  \thispagestyle{firstpage}
+    
+    \ifcover
+    \vfill
+    \thispagestyle{empty}
+    \centering
+    \includegraphics[width=0.8\textwidth]{sty/img/logo_\theme.pdf}
 
+    \vspace{0.7cm}
+    {\Huge \Fachtext~\Klassetext:~\Titeltext}
+
+    % \ifletzterstand
+    %     \vspace{0.2cm}
+    %     {\normalsize \color{gray} aktualisiert: \today}
+    % \fi
+    \fi
+    
+    \vfill
+    \newpage
+
+\thispagestyle{firstpage}
+    
   \Content
 }
 \AtEndDocument{
@@ -68,11 +88,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%% Neue Umgebungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newlength{\pardefault}
-\setlength{\pardefault}{\parindent}
-\newcommand{\neverindent}{ \setlength{\parindent}{0pt} }
-\newcommand{\autoindent}{ \setlength{\parindent}{\pardefault} }
 
 
 \endinput

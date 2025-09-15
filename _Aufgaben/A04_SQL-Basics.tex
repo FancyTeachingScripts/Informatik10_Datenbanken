@@ -1,0 +1,59 @@
+\Aufgabe{\ifbeamer\includegraphics[height=15pt]{_Aufgaben/img/artemis.png}~~~~\fi Wdh: SQL Basics}{
+    Bearbeite die Aufgabe \emphColB{Wdh - SQL Basics} auf \url{artemis.tum.de}. Artemis gibt dir immer, wenn du auf Submit drückst, die ersten Zeilen der Ergebnistabelle und ob deine SQL-Abfrage (bzw. welche Teile von ihr) richtig sind, aus.
+    
+    Wenn du eine Abfrage richtig hast, notiere sie unten im Skript.
+    
+    Falls du bei Gruppierung und Aggregatfunktionen Schwierigkeiten hast, hilft dir dieses \emphColC{Video (bitte Kopfhörer verwenden!)}: \UrlAndCode{bycs.link/simpleclub-group-sort-aggregat}
+    
+    \setcounter{tmp}{1}
+    
+   \vspace{0.3cm} \emphColB{1)} 
+   Vervollständige die SQL-Abfrage so, dass sie ID, Name, Art und URL aller Freibäder ausgibt.
+    \\\LoesungKaro{SELECT id, name, art, url\\FROM Schwimmbad\\WHERE art='Freibad' }{6}
+}
+\UnterAufgabe{Wdh: SQL Basics}{
+   \vspace{0.3cm} \emphColB{2)} 
+   Schreibe eine SQL-Abfrage, die ausgibt, wie viele Gemeinden es im Regierungsbezirk 'Oberbayern' gibt. 
+    \\\LoesungKaro{SELECT COUNT(*)\\FROM Gemeinde\\WHERE regierungsbezirk='Oberbayern'}{6}
+   
+   \vspace{0.3cm} \emphColB{3)} 
+   Schreibe eine SQL-Abfrage, die Name, Straße und URL (also die Internetadresse) alle Zoos in der Gemeinde mit Schluessel '09162000' ausgibt.
+    \\\LoesungKaro{SELECT name, strasse, url\\FROM Zoo\\WHERE gemeindeschluessel = '09162000'}{6}
+}
+   
+\UnterAufgabe{Wdh: SQL Basics}{   
+   \vspace{0.3cm} \emphColB{4)} 
+   Schreibe eine SQL-Abfrage, die die Summe aller weiblichen Einwohnerinnen und die Summe aller männlichen Einwohner gruppiert nach Regierungsbezirk und den Namen des jeweiligen Regierungsbezirks ausgibt.
+    \\\LoesungKaro{SELECT regierungsbezirk, SUM(einwohner\_w), SUM(einwohner\_m)\\FROM gemeinde\\GROUP BY regierungsbezirk}{6}
+   
+   \vspace{0.3cm} \emphColB{5)} 
+   Schreibe eine SQL-Abfrage, die die durchschnittliche Fläche der Gemeinde eines Kreises (=Landkreis) und den Namen und Regierungsbezirk des jeweiligen Landkreises anzeigt. Sortiere die Ausgabe nach Name des Landkreises.
+   \hinweis{Achtung: Du kannst bei der Verwendung von Gruppierung nur Spalten, nach denen gruppiert wird, und solche, die mit Aggregatfunktionen zusammengefasst werden, anzeigen! Überlege, wie du dieses Problem hier lösen kannst.}
+    \\\LoesungKaro{SELECT regierungsbezirk, kreis, avg(flaeche)\\FROM Gemeinde\\GROUP BY regierungsbezirk,kreis\\ORDER BY kreis}{6}
+}
+   
+\UnterAufgabe{Wdh: SQL Basics}{   
+   \vspace{0.3cm} \emphColB{6)} 
+   Schreibe eine SQL-Abfrage, die die Namen und Einwohnerzahlen aller Gemeinde, die mehr als 100.000 männliche und mehr als 100.000 weibliche Einwohner:innen haben, ausgibt.
+    \\\LoesungKaro{SELECT name, einwohner\_m, einwohner\_w\\FROM Gemeinde\\WHERE einwohner\_m > 100000\\AND einwohner\_w > 100000}{6}
+   
+   \vspace{0.3cm} \emphColB{7)} 
+   Schreibe eine SQL-Abfrage, die die Namen und Einwohnerzahlen aller Gemeinde, die mehr als 75.000 männliche oder mehr als 75.000 weibliche Einwohner:innen haben, ausgibt.
+    \\\LoesungKaro{SELECT name, einwohner\_m, einwohner\_w \\FROM Gemeinde\\WHERE einwohner\_m > 75000\\OR einwohner\_w > 75000}{6}
+}
+   
+\UnterAufgabe{Wdh: SQL Basics}{      
+   \vspace{0.3cm} \emphColB{8)} 
+   Schreibe eine SQL-Abfrage, die Name, Landkreis, Fläche und die Einwohnerzahlen aller Gemeinden ausgibt, die jeweils mehr als 50.000 männliche und weibliche Einwohner:innen oder eine Fläche größer als 100 km² hat.
+    \\\LoesungKaro{SELECT name, kreis, flaeche, einwohner\_m, einwohner\_w\\FROM Gemeinde\\WHERE (einwohner\_m > 50000 AND einwohner\_w > 50000)\\OR flaeche > 100}{6}
+   
+   \vspace{0.3cm} \emphColB{9)} 
+   Schreibe eine SQL-Abfrage, die die durchschnittlichen männlichen und weiblichen Einwohnerzahlen aller Gemeinde mit mehr als 100 km² Fläche pro Landkreis und den Namen des jeweiligen Landkreises ausgibt.
+    \\\LoesungKaro{SELECT kreis, AVG(einwohner\_m), AVG(einwohner\_w)\\FROM Gemeinde\\WHERE flaeche > 100\\GROUP BY kreis}{6}
+}
+   
+\UnterAufgabe{Wdh: SQL Basics}{      
+   \vspace{0.3cm} \emphColB{10)} 
+   Schreibe eine SQL-Abfrage, die die Anzahl von Wanderwegen, die zu einer Gemeinde führen in einer Spalte Anzahl und den jeweiligen Gemeindeschlüssel absteigend nach Anzahl sortiert, ausgibt.
+    \\\LoesungKaro{SELECT gemeindeschluessel,COUNT(*) as Anzahl\\FROM Wanderweg\_zu\_Gemeinde\\GROUP BY gemeindeschluessel\\ORDER BY Anzahl DESC}{6}
+}

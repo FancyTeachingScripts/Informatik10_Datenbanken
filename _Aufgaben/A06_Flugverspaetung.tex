@@ -1,0 +1,38 @@
+\Aufgabe[15]{\ifbeamer\includegraphics[height=15pt]{_Aufgaben/img/artemis.png}~~~~\fi Klassendiagramm Flugverspätung}{
+
+Bearbeite diese Aufgabe auf \url{artemis.tum.de}.
+
+Erstelle ein Klassendiagramm für die Datenbank unter \UrlAndCode{dbiu.de/flugverspaetungen/}.
+
+Damit du weniger schreiben musst, kannst du die \emphColB{letzten 6} Spalten der \emphColB{Tabelle Flug} durch \emphColB{... ersetzen}.
+
+Achte auf korrektes Format, Datentypen und Kardinalitäten. Zeichne das Diagramm anschließend unten auf:
+
+\LoesungKaroTikz{
+    \begin{class}{Flughafen}{0,0}
+        \attribute{int id}
+        \attribute{String land}
+        \attribute{String ort}
+        \attribute{String name}
+    \end{class}
+    
+    \begin{class}{Flug}{5,4}
+        \attribute{int id}
+        \attribute{DATUM datum}
+        \attribute{int flugnr}
+        \attribute{String flugzeug}
+        \attribute{...}
+    \end{class}
+    
+    \begin{class}{Fluggesellschaft}{12,4}
+        \attribute{String id}
+        \attribute{String name}
+    \end{class}
+
+    \uniAssociationAngle{Flug.west}{180}{above}{n}{startflughafen}{1}{left}{90}{Flughafen.north}
+    \uniAssociationAngle{Flug.south}{270}{right}{n}{zielflughafen}{1}{below}{0}{Flughafen.east}
+    
+    \uniAssociationAngle{Flug.east}{320}{below}{n}{fluggesellschaft$\_$id}{1}{below}{270}{Fluggesellschaft.south}
+}{20}
+
+}
