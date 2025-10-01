@@ -20,8 +20,21 @@
 \newcommand{\UnterAufgabe}[2][0]{}
 \newcommand{\Hefteintrag}[4][0]{}
 
-\newcommand{\theme}{mtg}
-\newcommand{\SetTheme}[1]{\renewcommand{\theme}{#1}}
+\definecolor{colA}{rgb}{0, 0, 0}
+\definecolor{colB}{rgb}{0, 0, 0}
+\definecolor{colC}{rgb}{0, 0, 0}
+\providecommand{\emphColA}[1]{}
+\providecommand{\emphColB}[1]{}
+\providecommand{\emphColC}[1]{}
+
+\newcommand{\theme}{default}
+\newcommand{\SetTheme}[1]{
+    \renewcommand{\theme}{#1}
+    \colorlet{colA}{colA_\theme}
+    \colorlet{colB}{colB_\theme}
+    \colorlet{colC}{colC_\theme}
+
+}
 
 
 \providecommand{\Content}{}
@@ -34,9 +47,6 @@
 \providecommand{\TFarbe}{black}
 \providecommand{\LFarbe}{blue}
 \providecommand{\LoesungTitleExtensionText}{}
-\providecommand{\emphColA}[1]{}
-\providecommand{\emphColB}[1]{}
-\providecommand{\emphColC}[1]{}
 \providecommand{\emphColor}[2]{}
 \providecommand{\hinweis}[1]{}
 \providecommand{\ShowAndStepCounter}[2]{}
@@ -52,9 +62,6 @@
 \providecommand{\umldrawcolor}{black}
 \providecommand{\umlfillcolor}{white}
 
-\definecolor{colA}{rgb}{0, 0, 0}
-\definecolor{colB}{rgb}{0, 0, 0}
-\definecolor{colC}{rgb}{0, 0, 0}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BOOLEANS

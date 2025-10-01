@@ -1,12 +1,19 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{sty/4_Skript}[]
 
-\definecolor{colA}{rgb}{0.957, 0.616, 0}
-\definecolor{colC}{rgb}{0.408, 0.686, 0.133}
-\definecolor{colB}{rgb}{0, 0.412, 0.698}
+\definecolor{colA_default}{rgb}{0.98, 0.553, 0.271}
+\definecolor{colB_default}{rgb}{0.024, 0.694, 0.906}
+\definecolor{colC_default}{rgb}{0.325, 0.820, 0.443}
+
+\definecolor{colA_mtg}{rgb}{0.957, 0.616, 0}
+\definecolor{colB_mtg}{rgb}{0, 0.412, 0.698}
+\definecolor{colC_mtg}{rgb}{0.408, 0.686, 0.133}
+
+\definecolor{colA_derksen}{rgb}{0.882, 0.682, 0.224}
+\definecolor{colB_derksen}{rgb}{0, 0.412, 0.698}
+\definecolor{colC_derksen}{rgb}{0.408, 0.686, 0.133}
 
 \renewcommand{\emphColor}[2]{{\color{#1} \emph{#2}}}
-
 \renewcommand{\emphColA}[1]{\emphColor{colA}{#1}}
 \renewcommand{\emphColB}[1]{\emphColor{colB}{#1}}
 \renewcommand{\emphColC}[1]{\emphColor{colC}{#1}}
@@ -243,7 +250,7 @@
             colback=colA!10!black,
             colframe=colA,
             fonttitle=\bfseries\Large,
-            overlay={\node[anchor=north east,outer sep=-1pt]  at (frame.north east) {\includegraphics[height=15pt]{sty/img/pen_\theme_white.pdf}};}
+            overlay={\node[anchor=north east,outer sep=-1pt]  at (frame.north east) {\includegraphics[height=15pt]{sty/img/pen_white.pdf}};}
         ]
         \marksectionstart
             #3

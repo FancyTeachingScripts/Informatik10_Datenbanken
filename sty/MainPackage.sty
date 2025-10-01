@@ -126,7 +126,7 @@
     \attachmentstrue
     \qrcodestrue
     \hintstrue
-    \covertrue
+    %\covertrue
 } 
 \DeclareOption{print-solution}{ 
     %\beamertrue 
@@ -139,6 +139,33 @@
     \attachmentstrue
     \qrcodestrue
     \hintstrue
+    %\covertrue
+} 
+\DeclareOption{print-students-cover}{ 
+    %\beamertrue 
+    %\loesungtrue
+    \avenirtrue
+    %\letzterstandtrue
+    %\einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    \attachmentstrue
+    \qrcodestrue
+    \hintstrue
+    \covertrue
+} 
+\DeclareOption{print-solution-cover}{ 
+    %\beamertrue 
+    \loesungtrue
+    \avenirtrue
+    \letzterstandtrue
+    %\einzelstundentrue
+    %\aufraeumentrue
+    %\timertrue
+    \attachmentstrue
+    \qrcodestrue
+    \hintstrue
+    \covertrue
 } 
 \DeclareOption{print-students-minimal}{ 
     %\beamertrue 
@@ -151,6 +178,7 @@
     %\attachmentstrue
     %\qrcodestrue
     \hintstrue
+    %\covertrue
 } 
 \DeclareOption{print-solution-minimal}{ 
     %\beamertrue 
@@ -163,6 +191,7 @@
     %\attachmentstrue
     %\qrcodestrue
     \hintstrue
+    %\covertrue
 } 
 
 \ProcessOptions\relax
@@ -224,7 +253,7 @@
 \else
   \RequirePackage{sty/0_Arbeitsblatt}
 \fi
-
+\SetTheme{default}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
